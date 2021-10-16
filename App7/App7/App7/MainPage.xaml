@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App7.MainPage">
+
+    <StackLayout>
+
+        <Frame BackgroundColor="#6E33FF" Padding="8">
+            <Label Text="UTEQ" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="36"/>
+        </Frame>
+        <Label Text="Nombre"/>
+        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                    <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+                <Entry Text="{Binding Nombre}" WidthRequest="230"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="Apellido paterno"/>
+        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                    <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+                <Entry Text="{Binding AppP}" WidthRequest="230"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="Apellido materno"/>
+        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                    <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+                <Entry Text="{Binding AppM}" WidthRequest="230"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="Correo"/>
+        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                    <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+                <Entry Text="{Binding Correo}" WidthRequest="230"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="Password"/>
+        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                    <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+                <Entry Text="{Binding Pass}" WidthRequest="230"/>
+            </StackLayout>
+        </Frame>
+
+        <Grid ColumnDefinitions="*,*" >
+            <Button Text="Encriptar" Command="{Binding BotonEnc}" BorderWidth="2" CornerRadius="15" FontSize="15" HorizontalOptions="Center" Padding="10" BackgroundColor="GreenYellow" TextColor="Black"></Button>
+            <Button Grid.Column="1" Text="Desencriptar" Command="{Binding BotonDes}" BorderWidth="2" CornerRadius="15" FontSize="15" HorizontalOptions="Center" Padding="10" BackgroundColor="Red" TextColor="White"></Button>
+        </Grid>
+
+        <Label Text="{Binding ContConvertido}"/>
+        <!--<Label Text="{Binding NombreCompleto}"/>-->
+
+    </StackLayout>
+
+
+</ContentPage>
